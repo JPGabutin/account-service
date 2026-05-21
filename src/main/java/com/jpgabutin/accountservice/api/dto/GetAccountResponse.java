@@ -2,6 +2,9 @@ package com.jpgabutin.accountservice.api.dto;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class GetAccountResponse {
 
     private Long customerNumber;
@@ -35,6 +38,42 @@ public class GetAccountResponse {
         this.savings = savings;
         this.transactionStatusCode = transactionStatusCode;
         this.transactionStatusDescription = transactionStatusDescription;
+    }
+
+    public Long getCustomerNumber() {
+        return customerNumber;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public String getCustomerMobile() {
+        return customerMobile;
+    }
+
+    public String getCustomerEmail() {
+        return customerEmail;
+    }
+
+    public String getAddress1() {
+        return address1;
+    }
+
+    public String getAddress2() {
+        return address2;
+    }
+
+    public List<SavingsResponse> getSavings() {
+        return savings;
+    }
+
+    public Integer getTransactionStatusCode() {
+        return transactionStatusCode;
+    }
+
+    public String getTransactionStatusDescription() {
+        return transactionStatusDescription;
     }
 
 }

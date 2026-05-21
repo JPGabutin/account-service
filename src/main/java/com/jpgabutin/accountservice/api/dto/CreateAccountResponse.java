@@ -1,5 +1,8 @@
 package com.jpgabutin.accountservice.api.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class CreateAccountResponse {
     private Long customerNumber;
     private Integer transactionStatusCode;
