@@ -18,7 +18,7 @@ public class CreateAccountRequest {
     @Size(max = 50)
     private String customerEmail;
 
-    @NotBlank(message = "Customer name is required field")
+    @NotBlank(message = "Address1 is required field")
     @Size(max = 100)
     private String address1;
 
